@@ -2,15 +2,17 @@
 <p class="noitce"><%= flash[:post] %></p>
 <p class="noitce"><%= flash[:update] %></p>
 
+<%= form_with model: @book, url: edit_book_path(@book.id), method: :patch do |f| %>
 
 
 <p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
-<p>
-  <strong>Body:</strong>
-  <%= @book.body %>
-</p>
+    <strong>Title:</strong>
+   <%= @book.title %>
+ </p>
+ <p>
+   <strong>Body:</strong>
+   <%= @book.body %>
+ </p>
 
-<a><%= link_to 'Edit', edit_book_path(@book.id) %>|<%= link_to 'Back', '/books' %></a>
+<%= link_to 'Edit', edit_book_path(@book.id) %>|<%= link_to 'Back', '/books' %>
+<% end %>
