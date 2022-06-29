@@ -12,17 +12,17 @@
 
 <%= form_with model: @books do |f| %>
 
-<div>
+<div class="field">
  <label>Title</label>
  <div><%= f.text_field :title %></div>
 </div>
 
-<div>
+<div class="field">
  <label>Body</label>
  <div><%= f.text_area :body %></div>
 </div>
 
- <div><%= f.submit 'Update Book' %></div>
+ <div class="actions"><%= f.submit 'Update Book' %></div>
 
  <a><%= link_to "show", edit_book_path(@books.id) %>|<%= link_to "back", '/books' %></a>
 

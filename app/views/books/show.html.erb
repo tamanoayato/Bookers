@@ -1,6 +1,6 @@
 
-<%= flash[:post] %>
-<%= flash[:update] %>
+<p class="noitce"><%= flash[:post] %></p>
+<p class="noitce"><%= flash[:update] %></p>
 
 
 
@@ -13,4 +13,4 @@
   <%= @book.body %>
 </p>
 
-<a><%= link_to 'Edit', edit_book_path(@book.id) %>|<%= link_to 'back', '/books' %></a>
+<a><%= link_to 'Edit', edit_book_path(@book.id) %>|<%= link_to 'Back', '/books' %></a>

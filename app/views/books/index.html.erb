@@ -1,6 +1,5 @@
 
-<%= flash[:delete] %>
-
+<p class="noitce"><%= flash[:delete] %></p>
 <h1>Books</h1>
 <table>
   <thead>
@@ -34,24 +33,24 @@
   <%= @book.errors.count %>errors prohibited this book from being saved:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
-    
+
      <li><%= message %></li>
     <% end %>
   </ul>
 <% end %>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
- <div>
+ <div class="field">
   <label>Title</label>
   <div><%= f.text_field :title %></div>
  </div>
 
-<div>
+<div class="field">
   <label>Body</label>
   <div><%= f.text_area :body %></div>
 </div>
 
 
- <%= f.submit 'Create Book' %>
+ <div class="actions"><%= f.submit 'Create Book' %></div>
 
 <% end %>
